@@ -9,7 +9,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/reactnativecn/react-native-custom-keyboard.git"
+    "url": "git+https://github.com/LenaZhuk/react-native-custom-keyboard.git"
   },
   "keywords": [
     "react-native"
@@ -18,5 +18,8 @@
   "license": "",
   "peerDependencies": {
     "react-native": "^0.29.0"
+  },
+  "dependencies": {
+    "prop-types": "latest"
   }
 }
