@@ -59,6 +59,18 @@ RCT_EXPORT_METHOD(hideKeyboard:(nonnull NSNumber *)reactTag) {
     [view endEditing:YES];
 }
 
+RCT_EXPORT_METHOD(submitEditing:(nonnull NSNumber *)reactTag) {
+    UITextField *view = (UITextField *)(((RCTBaseTextInputView*)[_bridge.uiManager viewForReactTag:reactTag]).backedTextInputView);
+    
+    [view endEditing:YES];
+    
+    [_bridge.eventDispatcher sendTextEventWithType:RCTTextEventTypeSubmit
+                                          reactTag:reactTag
+                                              text:view.attributedText.string
+                                               key:nil
+                                        eventCount:0];
+}
+
 RCT_EXPORT_METHOD(insertText:(nonnull NSNumber *)reactTag withText:(NSString*)text) {
     UITextField *view = (UITextField *)(((RCTBaseTextInputView*)[_bridge.uiManager viewForReactTag:reactTag]).backedTextInputView);
     

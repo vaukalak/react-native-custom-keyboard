@@ -16,6 +16,7 @@ const {
   install,
   uninstall,
   hideKeyboard,
+  submitEditing,
   insertText,
   backSpace,
   doDelete,
@@ -79,6 +80,7 @@ export class CustomTextInput extends Component {
 export {
   install,
   uninstall,
+  submitEditing,
   hideKeyboard,
   insertText,
   backSpace,
